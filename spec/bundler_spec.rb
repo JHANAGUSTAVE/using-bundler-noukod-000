@@ -24,11 +24,9 @@ describe "Bundler" do
 
     # http://bundler.io/v1.3/gemfile.html
     it "should list the hashie gem without specifying a version" do
-      expect(@gemfile_text =~ /gem ['"]hashie['"]$/).not_to eq(nil)
+      expect(@gemfile_text =~ /gem .hashie.\r\n?|\n|$/).not_to eq(nil)
     end
-    
-    
-    expect(@gemfile_text =~ ).not_to eq(nil)
+
 
     # http://bundler.io/v1.3/gemfile.html
     it "should list the sinatra gem with the specific version 1.4.4" do
