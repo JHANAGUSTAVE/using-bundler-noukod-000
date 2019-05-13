@@ -43,6 +43,8 @@ describe "Bundler" do
       expect(@gemfile_text =~ /gem ['"]awesome_print['"], ?(git:|:git ?=>) ?['"]git@github\.com:awesome\-print\/awesome_print\.git['"]/).not_to eq(nil)
     end
 
+/gem .awesome_print.,.*git.*/
+
     describe "groups" do
       after :each do
         system("rm .bundle/config")
